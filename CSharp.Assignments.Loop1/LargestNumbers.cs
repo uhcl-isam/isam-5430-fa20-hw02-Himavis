@@ -23,7 +23,30 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // get first number and assign it to variable largest
-            // write your codes here
+            int i = 1;
+            int largest;
+            int largest2;
+
+            Console.WriteLine("Enter the number:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            largest = number;
+
+            while (i <= 10)
+            {
+                Console.WriteLine("Enter the number:");
+                int number1 = Convert.ToInt32(Console.ReadLine());
+                if (number1 > largest)
+                {
+                    largest = number1;
+                    i++;
+                }
+                i++;
+
+            }
+
+            Console.WriteLine("{0} {1}",largest);
         }
     }
 }
+
+
