@@ -18,6 +18,17 @@ namespace CSharp.Assignments.Loop1
 
             while(end > 0)
             {
+                int a = 0;
+                int b = 1;
+                int c;
+
+                for (var i = 2; i <= end; i++)
+                {
+                    c = a + b;
+                    Console.WriteLine(c);
+                    a = b;
+                    b = c;
+                }
                
             }
 

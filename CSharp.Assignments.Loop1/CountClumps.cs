@@ -16,24 +16,30 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            int i = 0;
-            int clump = 0;
+            //int clump = 0;
 
-            int number;
+            int input;
 
-            while (i < )
+            var numbers = new List<int>();
+
+            while (true)
             {
                 Console.WriteLine("Enter an integer:");
-                number = Convert.ToInt32(Console.ReadLine());
-
-                if (number1 == number2)
-                {
-                    clump++;
-                }
-
-                i++;
+                input = Convert.ToInt32(Console.ReadLine());
+                numbers.Add(input);
 
             }
+
+            //for (var i = 0; i < numbers.Count; i++)
+            //{
+                 //if (numbers[i] == numbers[i + 1])
+                 //{
+                     //clump++;
+                 //}
+            //}
+            
+            //Console.WriteLine(clump);
+
         }
     }
 }
