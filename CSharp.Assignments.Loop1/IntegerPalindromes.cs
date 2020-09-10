@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -20,36 +22,38 @@ namespace CSharp.Assignments.Loop1
             // enter sentinel inputs
 
             Console.WriteLine("Enter a nine digits integer:");
-            int input = int.Parse(Console.ReadLine());
-            int right1 = input % 10;
-            int right2 = input % 100 / 10;
-            int right3 = input % 1000 / 100;
-            int right4 = input % 10000 / 1000;
-            int right5 = input % 100000 / 10000;
-            int right6 = input % 1000000 / 100000;
-            int right7 = input % 10000000 / 1000000;
-            int right8 = input % 100000000 / 10000000;
-            int right9 = input % 1000000000 / 100000000;
+            var input = Console.ReadLine();
+            int length = input.Length;
+            int number = int.Parse(input);
+            var numbers = new List<int>();
 
-            while (input / 1000000000 <= 0)
+            while (length != 9)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine("error");
                 Console.WriteLine("Enter a nine digits integer:");
+                input = Console.ReadLine();
+                length = input.Length;
+                number = int.Parse(input);
+            }
+
+            for (int n = 0; n <9; n++)
+
+            {
+                int right = number % (int)Math.Pow(10, n + 1 )/ (int)Math.Pow(10, n);
+                numbers.Add(right);
+
             }
 
             // then check the palindrome only once.
-
+            if (numbers[0] == numbers[8] && numbers[1] == numbers[7] && numbers[2] == numbers[6] && numbers[3] == numbers[5])
             {
-                if (right1 == right9 && right2 == right8 && right3 == right7 && right4 == right6)
-                {
-                    Console.WriteLine("a palindrome");
-                }
-                else
-                {
-                    Console.WriteLine(" not a palindrome");
-                }
+                Console.WriteLine("a palindrome");
             }
-          
+            else
+            {
+                Console.WriteLine("not a palindrome");
+            }
+
         }
     }
 }
