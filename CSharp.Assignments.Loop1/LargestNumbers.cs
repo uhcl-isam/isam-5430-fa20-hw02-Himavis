@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -23,27 +25,24 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // get first number and assign it to variable largest
-            int i = 1;
-            int largest;
 
-            Console.WriteLine("Enter the number:");
-            int input = Convert.ToInt32(Console.ReadLine());
-            largest = input;
+            Console.WriteLine("Enter a number:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int largest = number;
+            var numbers = new List<int>();
 
-            while (i <= 10)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Enter the number:");
-                int number = Convert.ToInt32(Console.ReadLine());
-                if (number > largest)
-                {
-                    largest = number;
-                    i++;
-                }
-                i++;
+                Console.WriteLine("Enter a number:");
+                number = Convert.ToInt32(Console.ReadLine());
+                numbers.Add(number);
 
             }
 
+            int largest2 = numbers[numbers.Count - 2];
+
             Console.WriteLine(largest);
+            Console.WriteLine(largest2);
         }
     }
 }
