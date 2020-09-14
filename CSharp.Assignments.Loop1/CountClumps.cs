@@ -20,13 +20,10 @@ namespace CSharp.Assignments.Loop1
 
             int input;
 
-            var numbers = new List<int>();
-
             while (true)
             {
                 Console.WriteLine("Enter an integer:");
                 input = Convert.ToInt32(Console.ReadLine());
-                numbers.Add(input);
 
             }
 

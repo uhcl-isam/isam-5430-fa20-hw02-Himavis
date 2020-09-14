@@ -158,21 +158,22 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int TeaParty(int tea, int candy)
         {
-            if (tea >= 5 || candy >= 5)
-            {
-                return 1;
-            }
-            else if (tea == candy * 2)
-            {
-                return 2;
-            }
 
-            else if (candy == 2 * tea)
+            if (tea >= 5 && candy >= 5)
             {
-                return 2;
+                if (tea >= candy * 2 || candy >= 2 * tea)
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 1;
+                }
             }
-
-            return 0;
+            else
+            {
+                return 0;
+            }
         }
 
         /// <summary>
@@ -275,9 +276,20 @@ namespace CSharp.Assignments.Loop1
         /// <param name="number">Number.</param>
         public static bool IsHilly(int number)
         {
+            int right1 = number % 10;
+            int right2 = number % 100 / 10;
+            // 123321
+            while (right1 <  right2)
+            {
+                number = number / 10;
+                right1 = number % 10;
+                right2 = number % 100 / 10;
+            }
 
 
-            throw new NotImplementedException();
+
+
+           throw new NotImplementedException();
         }
 
         /// <summary>

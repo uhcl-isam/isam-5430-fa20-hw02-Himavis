@@ -27,7 +27,7 @@ namespace CSharp.Assignments.Loop1
             int number = int.Parse(input);
             var numbers = new List<int>();
 
-            while (length != 9)
+            while (length != 9 && numbers[0] >=1)
             {
                 Console.WriteLine("error");
                 Console.WriteLine("Enter a nine digits integer:");

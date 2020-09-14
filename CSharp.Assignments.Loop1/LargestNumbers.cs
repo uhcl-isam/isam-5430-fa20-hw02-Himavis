@@ -27,22 +27,35 @@ namespace CSharp.Assignments.Loop1
             // get first number and assign it to variable largest
 
             Console.WriteLine("Enter a number:");
-            int number = Convert.ToInt32(Console.ReadLine());
-            int largest = number;
-            var numbers = new List<int>();
+            int pevnumber = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            int largest = pevnumber;
+            int largest2 = pevnumber;
 
-            for (int i = 0; i < 10; i++)
+            while (i < 10)
             {
                 Console.WriteLine("Enter a number:");
-                number = Convert.ToInt32(Console.ReadLine());
-                numbers.Add(number);
+                int curnumber = Convert.ToInt32(Console.ReadLine());
+                if (curnumber > largest)
+                {
+                    largest2 = largest;
+                    largest = curnumber;
+                }
+                else if (curnumber < largest && curnumber >= largest2)
+                {
+                    largest2 = curnumber;
+                }
+            i++;
 
             }
 
-            int largest2 = numbers[numbers.Count - 2];
-
             Console.WriteLine(largest);
             Console.WriteLine(largest2);
+
+            //
+            //if number > max, set max2 = max and max = number
+            // other wise, if the number > max2, then set max2 = = number
+            //
         }
     }
 }
