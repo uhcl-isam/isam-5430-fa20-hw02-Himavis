@@ -24,6 +24,31 @@ namespace CSharp.Assignments.Loop1
         {
             // prompt user for non-negative miles and obtain the input from user
             // codes go here.
+            decimal sum = 0;
+            decimal mpg = 0;
+
+            while (true)
+            {
+                Console.WriteLine("Enter miles or enter negative number to exit:");
+                decimal mile = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Enter gallons or enter negative number to exit:");
+                decimal gallon = Convert.ToDecimal(Console.ReadLine());
+                if (mile < 0 || gallon < 0)
+                {
+                    break;
+                }
+
+                else
+                {
+                    mpg = mile / gallon;
+                    Console.WriteLine($"{mpg:F}");
+                    sum += mpg;
+                    Console.WriteLine($"{sum:F}");
+                }
+            }
+
+
+
         }
     }
 }

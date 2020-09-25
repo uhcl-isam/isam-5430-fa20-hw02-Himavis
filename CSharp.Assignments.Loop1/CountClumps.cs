@@ -18,24 +18,33 @@ namespace CSharp.Assignments.Loop1
         {
             //int clump = 0;
 
-            int input;
+            int pev = 0;
+            bool isCheck = true;
+            int count = 0;
+            int i = 0; 
 
             while (true)
             {
                 Console.WriteLine("Enter an integer:");
-                input = Convert.ToInt32(Console.ReadLine());
-
+                string input = Console.ReadLine();
+                if (input == null)
+                {
+                    break;
+                }
+                int n = int.Parse(input);
+                if (i == 0)
+                {
+                    pev = n;
+                    i++;
+                }
+                else if (pev = n && isCheck == true)
+                {
+                    count++;
+                    isCheck = false;
+                }
             }
 
-            //for (var i = 0; i < numbers.Count; i++)
-            //{
-                 //if (numbers[i] == numbers[i + 1])
-                 //{
-                     //clump++;
-                 //}
-            //}
-            
-            //Console.WriteLine(clump);
+           
 
         }
     }
