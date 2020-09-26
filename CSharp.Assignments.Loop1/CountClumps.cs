@@ -42,7 +42,12 @@ namespace CSharp.Assignments.Loop1
                     count++;
                     isCheck = false;
                 }
+                else if (pev!=n && isCheck == false)
+                {
+                    isCheck = true;
+                }
             }
+            Console.WriteLine(count);
 
            
 

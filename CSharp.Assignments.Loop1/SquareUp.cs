@@ -17,11 +17,23 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            int i = 0;
             while (true)
             {
                 Console.WriteLine("Enter a number:");
                 int n = Convert.ToInt32(Console.ReadLine());
-                if ()
+                if (n < 0)
+                {
+                    break;
+                }
+                else
+                {
+                    for (; i< n; i++)
+                    {
+                        Console.Write(i);
+                        i++;
+                    }
+                }
             }
         }
     }
